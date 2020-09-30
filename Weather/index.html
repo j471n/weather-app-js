@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- icon -->
+    <link rel="icon" href="https://img.icons8.com/fluent/96/000000/weather.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <a href="index.html">
+        <h1 class="title">Weather</h1>
+    </a>
+    <section id="search">
+        <!-- Weather input feild -->
+        <form class="search-loaction">
+            <input type="text" name="city" placeholder="Which city?" autocomplete="off" class="serach-bar" />
+        </form>
+    </section>
+
+    <section class="card">
+        <!-- main section of the program -->
+
+        <div class="card-top">
+            <div class="city-name">
+                <p></p>
+                <span>...</span>
+            </div>
+
+            <img class="weather-image" src="img/background.jpg" alt="background not found?">
+
+            <!-- <img class="weather-image" src="img/night_image.svg" alt=""> -->
+
+        </div>
+
+
+        <section class="card-body">
+
+            <div class="card-mid row">
+                <div class="col-7">
+                    <span class="temp">--&deg;C</span>
+                </div>
+                <div class="condition-temp">
+                    <p class="condition">Thunder Storm</p>
+                    <p class="high">--&deg;C</p>
+                    <p class="low">--&deg;C</p>
+                </div>
+            </div>
+
+
+            <!-- fone -->
+
+            <div class="icon-container card shadow mx-auto icon">
+                <img src="img/cloud.svg" alt="" />
+            </div>
+
+
+            <div class="card-bottom px-5 py-4 row">
+                <div class="bottom-left">
+                    <p>--&deg;C</p>
+                    <span>Feels Like</span>
+                </div>
+                <div class="bottom-right">
+                    <p>--%</p>
+                    <span>Humidity</span>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+
+
+    <script src="request.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
