@@ -4,7 +4,22 @@ const cityName = document.querySelector('.city-name p');
 const cardBody = document.querySelector('.card-body');
 const timeImage = document.querySelector('.card-top img');
 const cardInfo = document.querySelector('.card');
-import requestCity from "./request";
+
+const key = 'cbe3dd267a18f6c89943b3eff94f1ed7';
+
+async function requestCity(city){
+    const baseURL = 'http://api.openweathermap.org/data/2.5/weather'
+    const query = `?q=${city}&appid=${key}`;
+
+    //make fetch call (promise call)
+    const response = await fetch(baseURL + query);
+
+    //promise data
+    const data = await response.json();
+    return data;
+
+}
+
 
 const spitOutCelcius = (kelvin) => {
     celcius = Math.round(kelvin - 273.15);
